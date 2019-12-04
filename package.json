@@ -1,16 +1,25 @@
 {
   "name": "test-commit",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "commit": "./node_modules/cz-customizable/standalone.js"
+    "commit": "./node_modules/cz-customizable/standalone.js",
+    "release": "standard-version"
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "validate-commit-msg"
+    }
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "cz-customizable": "^6.2.0"
+    "cz-customizable": "^6.2.0",
+    "husky": "^3.1.0",
+    "standard-version": "^7.0.1",
+    "validate-commit-msg": "^2.14.0"
   }
 }
